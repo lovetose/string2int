@@ -7,7 +7,7 @@ public class Main {
 		
 
 	
-	public static int[] string2int(String input) {
+	public static int string2int(String input) {
 		String number = input.replaceAll("[^0-9]", "");
 		
 		String[] input2 = number.split("");
@@ -15,9 +15,12 @@ public class Main {
 		for(int i = 0; i < input2.length; i++) {
 			Integer j = Integer.valueOf(input2[i]);
 			output[i] = j;
-			System.out.println(j);
+		}		
+		int toNumber=0;
+		for(int l = 0; l < output.length; l++) {
+			toNumber = 10 * toNumber + output[l];
 		}
-		return output;
+		return toNumber;
 	}
 
 }
